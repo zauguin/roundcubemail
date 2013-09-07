@@ -38,6 +38,10 @@ $config['db_dsnw'] = 'mysql://roundcube:pass@localhost/roundcubemail';
 // For example %n = mail.domain.tld, %t = domain.tld
 $config['default_host'] = 'localhost';
 
+// IMAP username modifier (if required)
+// %u will be replaced by the current username
+$config['imap_user'] = '';
+
 // SMTP server host (for sending mails).
 // To use SSL/TLS connection, enter hostname with prefix ssl:// or tls://
 // If left blank, the PHP mail() function is used

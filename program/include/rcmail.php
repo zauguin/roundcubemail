@@ -539,6 +539,9 @@ class rcmail extends rcube
         }
       }
     }
+    else if (!empty($config['imap_user']) && (!empty($config['username_domain_forced']) || strpos($username, '@') === false)) {
+        $username = str_replace('%u', $username, $config['imap_user']);
+    }
 
     if (!isset($config['login_lc'])) {
       $config['login_lc'] = 2; // default
